@@ -1,0 +1,64 @@
+*{
+    text-align: center;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+
+header{
+    background-color: aqua;
+    padding: 30px;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.main::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+aside{
+    background-color: aquamarine;
+    
+    
+}
+
+article{
+    background-color: red;
+    padding: 15px;
+}
+
+footer{
+    background-color: lightblue;
+    padding: 30px;
+}
+
+h3{
+    margin: 0;
+    
+}
+
+[class*=col-]{
+    float: left;
+    padding: 15px;
+}
+
+.col-1{width: 30%;}
+.col-2{width: 70%;}
+.col-3{width: 100%;}
+
+@media only screen and (max-width : 425px) {
+    [class*=col-]{
+        width: 100%;
+        
+    }
+    .main{
+        flex-direction: column-reverse;
+    }
+}
